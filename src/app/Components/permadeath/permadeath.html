@@ -1,0 +1,27 @@
+<section class="d-flex justify-content-center align-items-center py-5">
+
+    <div class="container pt-5">
+        <div class="row g-4 pt-4">
+            @for (item of permadeathData; track permadeathData.id) {
+            <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="card bg-dark h-100">
+                    <img src={{item.thumbnail}} class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5 class="card-title text-light fs-5 fw-medium">{{item.title}}</h5>
+                            <button class="btn btn-primary">Free</button>
+                        </div>
+                        <p class="card-text text-center fs-6 my-3 text-white-50 fw-bold">
+                            {{item.short_description.split(' ').slice(0, 10).join(' ')}}</p>
+                        </div>
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                        <h5 class="text-light p-1 rounded-2 fs-6 bg-white-subtle shadow">{{item.genre}}</h5>
+                        <h5 class="text-light p-1 rounded-2 fs-6 bg-white-subtle shadow">{{item.platform}}</h5>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+
+</section>
