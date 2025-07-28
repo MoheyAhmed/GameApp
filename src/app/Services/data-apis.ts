@@ -9,22 +9,22 @@ export class DataApis {
   constructor(private http : HttpClient){}
 
   getMmorpgData() : Observable<any>{
-    return  this.http.get('/api/api/games?category=mmorpg')
+    return  this.http.get('https://www.freetogame.com/api/games?category=mmorpg')
   }
   getShooterData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=shooter")
+    return  this.http.get("https://www.freetogame.com/api/games?category=shooter")
   }
   getPixelData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=pixel")
+    return  this.http.get("https://www.freetogame.com/api/games?category=pixel")
   }
   getPermadeathData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=permadeath")
+    return  this.http.get("https://www.freetogame.com/api/games?category=permadeath")
   }
   getSailingData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=sailing")
+    return  this.http.get("https://www.freetogame.com/api/games?category=sailing")
   }
   getSuperheroData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=superhero")
+    return  this.http.get("https://www.freetogame.com/api/games?category=superhero")
   }
 
   // ng serve --proxy-config proxy.conf.json
