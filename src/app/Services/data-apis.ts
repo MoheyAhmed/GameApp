@@ -7,24 +7,25 @@ import { Observable } from 'rxjs';
 })
 export class DataApis {
   constructor(private http : HttpClient){}
-
+  headers = {
+  'x-rapidapi-host': 'free-to-play-games-database.p.rapidapi.com',
+  'x-rapidapi-key': '93f75df45fmsh97053a544873791p121164jsne9e75f6d93a9'
+};
   getMmorpgData() : Observable<any>{
-    return  this.http.get('/api/api/games?category=mmorpg')
-  }
+    return  this.http.get('https://free-to-play-games-database.p.rapidapi.com/api/games?category=mmorpg' , { headers: this.headers });  }
   getShooterData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=shooter")
+    return  this.http.get('https://free-to-play-games-database.p.rapidapi.com/api/games?category=shooter', { headers: this.headers });
   }
   getPixelData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=pixel")
-  }
+    return  this.http.get("https://free-to-play-games-database.p.rapidapi.com/api/games?category=pixel" , { headers: this.headers });  }
   getPermadeathData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=permadeath")
+    return  this.http.get("https://free-to-play-games-database.p.rapidapi.com/api/games?category=permadeath" , { headers: this.headers });
   }
   getSailingData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=sailing")
+    return  this.http.get("https://free-to-play-games-database.p.rapidapi.com/api/games?category=sailing" , { headers: this.headers });
   }
   getSuperheroData() : Observable<any>{
-    return  this.http.get("/api/api/games?category=superhero")
+    return  this.http.get("https://free-to-play-games-database.p.rapidapi.com/api/games?category=superhero" , { headers: this.headers });
   }
 
   // ng serve --proxy-config proxy.conf.json
